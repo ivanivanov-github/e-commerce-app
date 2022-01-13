@@ -9,8 +9,6 @@ const HTTPInterface = {
             'Content-Type': 'application/json',
           },
         });
-        // const ready = await response.json();
-        // return ready;
         return await response.json();
     }
 }

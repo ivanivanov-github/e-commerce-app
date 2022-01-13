@@ -12,11 +12,8 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/api/password', (req, res) => {
-    // console.log(req.body)
     if(req.body.id === '1234') {
-    // console.log('message')
       res.status(200).json({result: true})
-      // return
     }
     else{
       res.status(200).json({result: false})

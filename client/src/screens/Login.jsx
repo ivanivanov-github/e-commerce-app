@@ -3,12 +3,11 @@ import { useHistory } from "react-router-dom";
 import authService from "../services/auth.service";
 import "../style.css";
 
-export default function Login({ authorized }) {
+export default function Login() {
   const [password, setPassword] = useState("");
   let history = useHistory();
 
   async function handleAuthorized() {
-    // const authResult = await authorized(password);
     const authResult = await authService.checkPassword(password);
     console.log(authResult.result);
     if (!authResult.result) {
@@ -17,7 +16,6 @@ export default function Login({ authorized }) {
     } else {
       history.push("/produits");
     }
-    // return;
   }
 
   const handleChange = (e) => {
