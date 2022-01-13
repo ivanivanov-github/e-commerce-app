@@ -1,0 +1,105 @@
+html, body, #root {
+   padding: 0px;
+   margin: 0px;
+   height: 100%;
+}
+
+#login-img {
+    /* border: 1px solid red; */
+    height: 60%;
+    width: 60%;
+    min-width: 500px;
+    min-height: 300px;
+    /* padding-left: 150px; */
+}
+
+.login-bg-img {
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url(../public/img/login_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.login-container {
+    height: 69vh;
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1.5;
+}
+
+.title {
+    align-self: flex-end;
+    padding-bottom: 55px;
+    padding-right: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color: #7E5F80;
+    text-shadow: -1px -1px 0 #BDBCBC, 1px -1px 0 #BDBCBC, -1px 1px 0 #BDBCBC, 1px 1px 0 #BDBCBC;
+}
+
+.form-group {
+    max-width: 175px;
+    /* border: 1px solid black; */
+    text-align: right;
+    flex-basis: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: #988C88;
+}
+
+#email {
+    padding: 10px 0px 10px;
+}
+
+#password {
+    padding: 10px 0px 10px;
+}
+
+#password-confirm {
+    padding: 10px 0px 10px;
+}
+
+.bn1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2rem;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #7E5F80;
+    backface-visibility: hidden;
+    border: 5px solid #7E5F80;
+    border-radius: 3rem;
+}
+
+.bn2 {
+    border-color: #7E5F80;
+    transition: background-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+}
+    
+.bn2:hover {
+    border-color: #fff;
+    background-color: #60605e;
+    color: #fff;
+    cursor: pointer;
+}
