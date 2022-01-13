@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import authService from "../services/auth.service";
+import { Tokens } from "../Auth_Tokens/Tokens";
 import "../style.css";
 
 export default function Login() {
@@ -8,12 +9,14 @@ export default function Login() {
   let history = useHistory();
 
   async function handleAuthorized() {
+    console.log(Tokens.users[0].user1.user1AuthToken);
     const authResult = await authService.checkPassword(password);
     console.log(authResult.result);
     if (!authResult.result) {
       history.push("/nope");
       return;
     } else {
+      Tokens.users[0].user1.user1AuthToken = true;
       history.push("/produits");
     }
   }
