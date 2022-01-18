@@ -1,5 +1,5 @@
 # e-commerce-app
-Project is composed of a react front-end and an express back-end communication with a mongoDB server.
+Project is composed of a react front-end and an express back-end communication with a mongoDB database.
 # Front-end
 It is stored in the client folder. Use 'cd .\client\' to navigate to the folder. Then use 'npm install' to install the dependencies. Then use 'npm start' to start the front-end on port 3000.
 # Back-end
