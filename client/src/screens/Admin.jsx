@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Admin() {
-    return (
-        <div>
-            hello world
-        </div>
-    )
+  return <div>hello world</div>;
 }
 
-export default Admin
+export default Admin;

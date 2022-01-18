@@ -5,24 +5,26 @@ import { Tokens } from "../Auth_Tokens/Tokens";
 import "../style.css";
 
 export default function Login() {
-  const [password, setPassword] = useState("");
+  const [loginInfos, setLoginInfos] = useState({
+    user: "",
+    password: "",
+  });
   let history = useHistory();
 
   async function handleAuthorized() {
-    console.log(Tokens.users[0].user1.user1AuthToken);
-    const authResult = await authService.checkPassword(password);
-    console.log(authResult.result);
+    const authResult = await authService.checkPassword(loginInfos);
     if (!authResult.result) {
-      history.push("/nope");
-      return;
+      window.alert("Wrong credentials, try again");
     } else {
       Tokens.users[0].user1.user1AuthToken = true;
-      history.push("/produits");
+      history.push("/home");
     }
   }
 
   const handleChange = (e) => {
-    setPassword(e.target.value);
+    const loginInfosCopy = { ...loginInfos };
+    loginInfosCopy[e.target.id] = e.target.value;
+    setLoginInfos(loginInfosCopy);
   };
 
   return (
@@ -30,28 +32,35 @@ export default function Login() {
       <div className="login-bg-img">
         <div className="login-container">
           <div className="image-container">
-            <img alt="login" src="img/shoes.jpg" id="login-img" />
+            <img alt="login" src="img/shoeslogin.png" id="login-img" />
             <h1 className="title">E-COMMERCE</h1>
           </div>
           <div className="form-button-container">
             <form className="form-group">
-              <h2 className="text-center">Sign up</h2>
-              <label htmlFor="email">Email:</label>
+              <h2 className="text-center">Sign in</h2>
+              <label htmlFor="email">Email :</label>
+              <label htmlFor="testUserName">(user@gmail.com)</label>
               <input
                 type="text"
-                id="email"
-                value={password}
+                id="user"
+                value={loginInfos.user}
                 onChange={(e) => {
                   handleChange(e);
                 }}
                 required
               />
 
-              <label htmlFor="password">Password:</label> 
-              <input type="text" id="password" onChange={() => {}} required />
-
-              <label htmlFor="password-confirm">Confirm Password:</label>
-              <input type="text" id="password-confirm" onChange={() => {}} required />
+              <label htmlFor="password">Password :</label>
+              <label htmlFor="testPassword">(password: 1234)</label>
+              <input
+                type="text"
+                id="password"
+                value={loginInfos.password}
+                onChange={(e) => {
+                  handleChange(e);
+                }}
+                required
+              />
             </form>
             <button className="bn1 bn2" onClick={handleAuthorized}>
               Sign in

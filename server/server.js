@@ -1,25 +1,34 @@
-const express = require('express')
-const app = express()
-const { ROLE, users } = require('./data/data')
+const express = require("express");
+const cors = require("cors");
+const { json } = require("express");
+const { ROLE, users } = require("./data/data");
+const { dbService } = require("./services/database.service");
 // const projectRouter = require('./routes/projects')
 // const { authUser, authRole } = require('./basicAuth')
-const { json } = require('express')
-const port = 5000
-const cors = require("cors")
 
-app.use(cors())
+const port = 5000;
+const SIZE_LIMIT = "50mb";
+const app = express();
+const { ProductsController } = require("./controllers/products.controller");
+const { CartController } = require("./controllers/cart.controller");
+const { PasswordController } = require("./controllers/password.controller");
+const productsController = new ProductsController();
+const cartController = new CartController();
+const passwordController = new PasswordController();
 
-app.use(express.json())
+app.use(cors());
 
-app.post('/api/password', (req, res) => {
-    if(req.body.id === '1234') {
-      res.status(200).json({result: true})
-    }
-    else{
-      res.status(200).json({result: false})
-    }
-})
+app.use(express.json({ limit: SIZE_LIMIT, extended: true }));
+
+app.use("/api/products", productsController.router);
+
+app.use("/api/cart", cartController.router);
+
+app.use("/api/password", passwordController.router);
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+  dbService.connectToServer().then(() => {
+    productsController.productsService.populateDb();
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+});

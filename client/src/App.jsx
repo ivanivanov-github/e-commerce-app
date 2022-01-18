@@ -1,12 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Login from './screens/Login';
+import Home from './screens/Home';
 import Admin from './screens/Admin';
-import Vendeur from './screens/Vendeur';
-import Contact from './screens/Contact.jsx';
+import AddProduct from './screens/AddProduct';
+import Checkout from './screens/Checkout';
 import Erreur from './screens/Erreur';
-import Produit from './screens/Produit';
-import Produits from './screens/Produits';
+import Product from './screens/Product';
+import Cart from './screens/Cart';
+import NonExistingPage from './screens/NonExistingPage';
 import './style.css';
 
 function App() {
@@ -15,12 +17,14 @@ function App() {
     <div>
       <Switch>
         <Route exact path='/'><Login /></Route>
-        <Route exact path='/produits'><Produits /></Route>
-        <Route exact path='/produit'><Produit /></Route>
-        <Route exact path='/contact'><Contact /></Route>
-        <Route exact path='/vendeur'><Vendeur /></Route>
+        <Route exact path='/home'><Home /></Route>
+        <Route exact path='/products'><AddProduct /></Route>
+        <Route exact path='/product'><Product /></Route>
+        <Route exact path='/cart'><Cart /></Route>
         <Route exact path='/admin'><Admin /></Route>
-        <Route exact path='*'><Erreur /></Route>
+        <Route exact path='/erreur'><Erreur /></Route>
+        <Route exact path='/checkout'><Checkout /></Route>
+        <Route path='*'><NonExistingPage /></Route>
       </Switch>
     </div>
   );

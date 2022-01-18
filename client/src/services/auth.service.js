@@ -1,14 +1,14 @@
-import httpService from './http.service';
+import httpService from "./http.service";
 
 class AuthService {
-    constructor() {
-        this.httpService = httpService;
-    }
+  constructor() {
+    this.httpService = httpService;
+  }
 
-    async checkPassword(passwordInput) {
-        const validPass = await this.httpService.checkPassword(passwordInput);
-        return validPass;
-    }
+  async checkPassword(passwordInfos) {
+    const validPass = await this.httpService.checkPassword(passwordInfos);
+    return validPass;
+  }
 }
 
 const authService = new AuthService();
