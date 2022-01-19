@@ -8,7 +8,9 @@ const { dbService } = require("./services/database.service");
 
 const port = 5000;
 const SIZE_LIMIT = "50mb";
-const app = express();
+const app = express().use(bodyParser.urlencoded())
+                     .use(express.static(__dirname + '/public'))
+                     .use('/node_modules',  express.static(__dirname + '/node_modules'));;
 const { ProductsController } = require("./controllers/products.controller");
 const { CartController } = require("./controllers/cart.controller");
 const { PasswordController } = require("./controllers/password.controller");
