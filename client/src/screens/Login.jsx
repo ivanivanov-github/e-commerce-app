@@ -22,6 +22,7 @@ export default function Login() {
   }
 
   const handleChange = (e) => {
+    // console.log(process.env.API_URL)
     const loginInfosCopy = { ...loginInfos };
     loginInfosCopy[e.target.id] = e.target.value;
     setLoginInfos(loginInfosCopy);
