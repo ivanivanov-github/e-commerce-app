@@ -39,7 +39,7 @@ if(process.env.NODE_END === 'production') {
   })
 }
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   dbService.connectToServer().then(() => {
     productsController.productsService.populateDb();
     console.log(`Example app listening at http://localhost:${port}`);
