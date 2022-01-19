@@ -1,9 +1,6 @@
-// const windowUrl = window.location.href;
-
 const HTTPInterface = {
-  // SERVER_URL: "http://localhost:5000/api",
-  // SERVER_URL: `${process.env.API_URL}`
-  SERVER_URL: "https://evening-basin-64737.herokuapp.com/api",
+  SERVER_URL: "http://localhost:5000/api",
+  // SERVER_URL: "https://evening-basin-64737.herokuapp.com/api",
 
   async GET(endpoint) {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`);
