@@ -8,6 +8,7 @@ const { dbService } = require("./services/database.service");
 
 const port = 5000;
 const SIZE_LIMIT = "50mb";
+const bodyParser  = require('body-parser');
 const app = express().use(bodyParser.urlencoded())
                      .use(express.static(__dirname + '/public'))
                      .use('/node_modules',  express.static(__dirname + '/node_modules'));;
