@@ -14,8 +14,8 @@
     "express": "^4.17.2"
   },
   "dependencies": {
-    "express":"*",
-    "body-parser":"*",
+    "express": "*",
+    "body-parser": "*",
     "cors": "^2.8.5",
     "mongodb": "^4.3.0"
   }

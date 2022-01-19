@@ -3,15 +3,14 @@ const cors = require("cors");
 const { json } = require("express");
 const { ROLE, users } = require("./data/data");
 const { dbService } = require("./services/database.service");
-// const projectRouter = require('./routes/projects')
-// const { authUser, authRole } = require('./basicAuth')
 
 const port = 5000;
 const SIZE_LIMIT = "50mb";
-const bodyParser  = require('body-parser');
-const app = express().use(bodyParser.urlencoded())
-                     .use(express.static(__dirname + '/public'))
-                     .use('/node_modules',  express.static(__dirname + '/node_modules'));;
+// const bodyParser  = require('body-parser');
+// const app = express().use(bodyParser.urlencoded())
+//                      .use(express.static(__dirname + '/public'))
+//                      .use('/node_modules',  express.static(__dirname + '/node_modules'));;
+const app = express();
 const { ProductsController } = require("./controllers/products.controller");
 const { CartController } = require("./controllers/cart.controller");
 const { PasswordController } = require("./controllers/password.controller");
