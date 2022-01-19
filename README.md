@@ -1,6 +1,6 @@
 # E-COMMERCE
 
-#### The e-commerce-app is a fully online and modern e commerce store concept. It is implemented with a simple login in system, allows users to add products to their cart, confirm a transaction to buy the products in their cart, add comments on the products, and even sell their own items on the store! 
+#### The e-commerce-app is a fully online and modern e commerce store concept. It is implemented with a simple login in system, allows users to add products to their cart, confirm a transaction to buy the products in their cart, add comments on the products, and even sell their own items on the store! (CRUD operations)
 
 ### The purpose of this project is to learn and practice concepts related to: 
 > - HTML/CSS/JavaScript
