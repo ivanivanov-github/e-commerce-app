@@ -28,6 +28,7 @@ export default function Checkout() {
     event.preventDefault();
     await httpService.resetAllProductsFromCart();
     window.location.reload(false);
+    window.alert(`Your order has been confirmed! Thank you for shopping with our e commerce website!`);
     history.push("/nope");
   };
 

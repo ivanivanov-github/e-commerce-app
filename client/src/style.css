@@ -106,6 +106,7 @@ body,
 header {
   background-color: #bea3f1;
   font-family: "Raleway", sans-serif;
+  border-radius: 4px;
 }
 
 .header-container {
@@ -115,6 +116,7 @@ header {
   font-size: 20px;
   font-family: Roboto;
   padding: 0px;
+  box-shadow: 5px 10px 50px 10px #c0c0c0;
 }
 
 .nav-container ul {
@@ -285,6 +287,7 @@ article p {
   border-radius: 4px;
   transition: all ease-out 0.2s;
   background-color: rgb(233, 215, 250);
+  box-shadow: 5px 10px 100px 10px #c0c0c0;
 }
 
 .product-link:active,
@@ -309,12 +312,6 @@ article p {
 .product-link img {
   width: 100%;
   margin-bottom: 10px;
-}
-
-.home-container {
-  min-height: 929px;
-  padding: 20px;
-  background-color: rgb(250, 215, 250);
 }
 
 .error-container {
@@ -477,4 +474,64 @@ input[type="file"] {
 
 .right-align {
   align-items: flex-end;
+}
+
+.home-footer-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container {
+  min-height: 929px;
+  padding: 20px;
+  background-color: rgb(250, 215, 250);
+  flex: 1 0 auto;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: rgb(250, 215, 250);
+}
+
+.footer {
+  margin-left: 70px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 75%;
+  background-color: rgb(250, 215, 250);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-content h3{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content h3 a{
+  color: #000;
+}
+
+.footer-content button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.0em;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.footer-content button:hover {
+  cursor: pointer;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
 }
