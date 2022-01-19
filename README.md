@@ -9,6 +9,7 @@
 > - Back-end
 > - Building a REST API
 > - Web Architectural Patterns
+> - Dynamic website
 
 #### More specifically, I used the following:
 > - Dependency injection
