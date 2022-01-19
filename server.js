@@ -30,7 +30,7 @@ app.use("/api/cart", cartController.router);
 app.use("/api/password", passwordController.router);
 
 // Serve static assets if in production
-if(process.env.NODE_END === 'production') {
+if(process.env.NODE_ENV === 'production') {
   // Set static folder
   // app.use(express.static('client/build'));
   app.use(express.static(path.join(__dirname, 'client', 'build')));
