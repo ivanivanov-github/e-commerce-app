@@ -221,9 +221,10 @@ article p {
   padding: 0;
   margin-top: 10px;
   list-style: none;
-  border: 1px solid #999;
+  border: none;
   border-radius: 4px;
   flex-wrap: wrap;
+  box-shadow: 5px 10px 100px 10px #c0c0c0;
 }
 
 .btn-group > button {
