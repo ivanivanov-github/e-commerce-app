@@ -1,6 +1,6 @@
 # E-COMMERCE
 
-## Website link: https://evening-basin-64737.herokuapp.com/
+## Website link: ~~https://evening-basin-64737.herokuapp.com/~~ (No longer hosted. Heroku is no longer free)
 
 #### The e-commerce-app is a fully online and modern e commerce store concept. It is implemented with a simple login in system, allows users to add products to their cart, confirm a transaction to buy the products in their cart, add comments on the products, and even sell their own items on the store! (CRUD operations)
 
